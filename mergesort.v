@@ -1,3 +1,7 @@
+//Lorenzo Walz and Patrick Paschal
+//ECE464 - Spring 2015
+//Mergesort Final Project
+
 module mergesort( registers_in, mergelist_out);
 
 //------inputs-----------//

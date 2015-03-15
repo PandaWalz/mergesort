@@ -18,7 +18,7 @@ end
 else
 begin
 	leftanswer <= word2;
-	rightanswer <= word2;
+	rightanswer <= word1;
 end
 end //End of always@
 

@@ -5,8 +5,7 @@
 module mergesort_test;
 
 reg reset, clock;
-reg [7:0] memory [0:31];
-wire [31:0] mergelist_out;
+wire [255:0] mergelist_out;
 
 integer i;
 

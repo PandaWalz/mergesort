@@ -6,7 +6,7 @@ module mergesort_test;
 
 reg reset, clock;
 reg [7:0] memory [0:31];
-wire [31:0] mergelist_out;
+wire [255:0] mergelist_out;
 
 integer i;
 
@@ -19,7 +19,6 @@ begin
 for(i=0;i<16;i=i+1)
 begin
 	$display("%h",mergelist_out);
-	//$display("%d:%h",i, memory[i]);	
 end
 	#100 $finish;
 end

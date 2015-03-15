@@ -1,17 +1,19 @@
 ncverilog: 09.20-s019: (c) Copyright 1995-2010 Cadence Design Systems, Inc.
-TOOL:	ncverilog	09.20-s019: Started on Mar 15, 2015 at 15:36:12 EDT
+TOOL:	ncverilog	09.20-s019: Started on Mar 15, 2015 at 16:23:24 EDT
 ncverilog
 	+access+r
+	firstlevelsort.v
 	mergesort.v
 	mergesort_test.v
 	twobytesort.v
 	twobytesort_test.v
-Recompiling... reason: file './mergesort.v' is newer than expected.
-	expected: Sun Mar 15 15:31:53 2015
-	actual:   Sun Mar 15 15:36:11 2015
-file: mergesort.v
-	module worklib.mergesort:v
+Recompiling... reason: file './firstlevelsort.v' is newer than expected.
+	expected: Sun Mar 15 16:18:12 2015
+	actual:   Sun Mar 15 16:23:17 2015
+file: firstlevelsort.v
+	module worklib.firstlevelsort:v
 		errors: 0, warnings: 0
+file: mergesort.v
 file: mergesort_test.v
 file: twobytesort.v
 file: twobytesort_test.v
@@ -19,44 +21,46 @@ file: twobytesort_test.v
 	Elaborating the design hierarchy:
 	Building instance overlay tables: .................... Done
 	Generating native compiled code:
-		worklib.mergesort:v <0x254f7167>
-			streams:   8, words:  1512
+		worklib.firstlevelsort:v <0x46c09423>
+			streams:  10, words:  2198
+		worklib.mergesort:v <0x76454d2a>
+			streams:   1, words:   137
 	Loading native compiled code:     .................... Done
 	Building instance specific data structures.
 mergesort u1(clock, reset, registers_in, mergelist_out);
                                       |
-ncelab: *W,CSINFI (./mergesort_test.v,26|38): implicit wire has no fanin (mergesort_test.registers_in).
+ncelab: *W,CSINFI (./mergesort_test.v,25|38): implicit wire has no fanin (mergesort_test.registers_in).
 	Design hierarchy summary:
 		             Instances  Unique
-		Modules:             6       4
-		Registers:          22      18
+		Modules:             8       5
+		Registers:          22      16
 		Scalar wires:        6       -
-		Vectored wires:     13       -
-		Always blocks:       6       4
+		Vectored wires:     18       -
+		Always blocks:       7       4
 		Initial blocks:      3       3
-		Cont. assignments:   5       7
+		Cont. assignments:   8      10
 	Writing initial simulation snapshot: worklib.mergesort_test:v
 Loading snapshot worklib.mergesort_test:v .................... Done
 ncsim> source /ncsu/cadence2010/ius/tools/inca/files/ncsimrc
 ncsim> run
 12e4
-12e43c4e
-12e43c4e
-12e43c4e
-12e43c4e
-12e43c4e
-12e43c4e
-12e43c4e
-12e43c4e
-12e43c4e
-12e43c4e
-12e43c4e
-12e43c4e
-12e43c4e
-12e43c4e
-12e43c4e
-12e43c4e
+000000000000000000000000000000000000000000000000000012e43c4e94f5
+000000000000000000000000000000000000000000000000000012e43c4e94f5
+000000000000000000000000000000000000000000000000000012e43c4e94f5
+000000000000000000000000000000000000000000000000000012e43c4e94f5
+000000000000000000000000000000000000000000000000000012e43c4e94f5
+000000000000000000000000000000000000000000000000000012e43c4e94f5
+000000000000000000000000000000000000000000000000000012e43c4e94f5
+000000000000000000000000000000000000000000000000000012e43c4e94f5
+000000000000000000000000000000000000000000000000000012e43c4e94f5
+000000000000000000000000000000000000000000000000000012e43c4e94f5
+000000000000000000000000000000000000000000000000000012e43c4e94f5
+000000000000000000000000000000000000000000000000000012e43c4e94f5
+000000000000000000000000000000000000000000000000000012e43c4e94f5
+000000000000000000000000000000000000000000000000000012e43c4e94f5
+000000000000000000000000000000000000000000000000000012e43c4e94f5
+000000000000000000000000000000000000000000000000000012e43c4e94f5
 Simulation complete via $finish(1) at time 110 NS + 0
 ./twobytesort_test.v:20 	#100 $finish;
 ncsim> exit
-TOOL:	ncverilog	09.20-s019: Exiting on Mar 15, 2015 at 15:36:13 EDT  (total: 00:00:01)
+TOOL:	ncverilog	09.20-s019: Exiting on Mar 15, 2015 at 16:23:25 EDT  (total: 00:00:01)

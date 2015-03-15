@@ -5,6 +5,7 @@
 -XLMODE
 ./INCA_libs/irun.lnx86.09.20.nc
 -RUNMODE
+firstlevelsort.v
 mergesort.v
 mergesort_test.v
 twobytesort.v

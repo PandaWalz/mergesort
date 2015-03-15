@@ -1,49 +1,57 @@
 ncverilog: 09.20-s019: (c) Copyright 1995-2010 Cadence Design Systems, Inc.
-TOOL:	ncverilog	09.20-s019: Started on Mar 01, 2015 at 17:49:42 EST
+TOOL:	ncverilog	09.20-s019: Started on Mar 15, 2015 at 15:22:43 EDT
 ncverilog
 	+access+r
 	mergesort.v
-Recompiling... reason: file './mergesort.v' is newer than expected.
-	expected: Sun Mar  1 17:44:45 2015
-	actual:   Sun Mar  1 17:45:44 2015
+	mergesort_test.v
+	twobytesort.v
+	twobytesort_test.v
 file: mergesort.v
-	module worklib.mergesort:v
-		errors: 0, warnings: 0
+file: mergesort_test.v
+file: twobytesort.v
+file: twobytesort_test.v
 		Caching library 'worklib' ....... Done
 	Elaborating the design hierarchy:
 	Building instance overlay tables: .................... Done
 	Generating native compiled code:
-		worklib.mergesort:v <0x7342ca0e>
-			streams:   4, words:  2535
+		worklib.twobytesort:v <0x1ca1005f>
+			streams:   3, words:   856
 	Loading native compiled code:     .................... Done
 	Building instance specific data structures.
+mergesort u1(clock, reset, registers_in, mergelist_out);
+                                      |
+ncelab: *W,CSINFI (./mergesort_test.v,26|38): implicit wire has no fanin (mergesort_test.registers_in).
 	Design hierarchy summary:
-		         Instances  Unique
-		Modules:         1       1
-		Registers:       4       4
-		Scalar wires:    1       -
-		Always blocks:   1       1
-		Initial blocks:  2       2
-	Writing initial simulation snapshot: worklib.mergesort:v
-Loading snapshot worklib.mergesort:v .................... Done
+		             Instances  Unique
+		Modules:             5       4
+		Registers:          18      16
+		Scalar wires:        7       -
+		Vectored wires:      9       -
+		Always blocks:       5       4
+		Initial blocks:      3       3
+		Cont. assignments:   3       5
+	Writing initial simulation snapshot: worklib.mergesort_test:v
+Loading snapshot worklib.mergesort_test:v .................... Done
 ncsim> source /ncsu/cadence2010/ius/tools/inca/files/ncsimrc
 ncsim> run
-          0:xx
-          1:xx
-          2:xx
-          3:xx
-          4:xx
-          5:xx
-          6:xx
-          7:xx
-          8:xx
-          9:xx
-         10:xx
-         11:xx
-         12:xx
-         13:xx
-         14:xx
-         15:xx
-ncsim: *W,RNQUIE: Simulation is complete.
+12e4
+zzzzzzzz
+zzzzzzzz
+zzzzzzzz
+zzzzzzzz
+zzzzzzzz
+zzzzzzzz
+zzzzzzzz
+zzzzzzzz
+zzzzzzzz
+zzzzzzzz
+zzzzzzzz
+zzzzzzzz
+zzzzzzzz
+zzzzzzzz
+zzzzzzzz
+zzzzzzzz
+Simulation complete via $finish(1) at time 110 NS + 0
+./twobytesort_test.v:20 	#100 $finish;
 ncsim> exit
-TOOL:	ncverilog	09.20-s019: Exiting on Mar 01, 2015 at 17:49:43 EST  (total: 00:00:01)
+TOOL:	ncverilog	09.20-s019: Exiting on Mar 15, 2015 at 15:22:44 EDT  (total: 00:00:01)

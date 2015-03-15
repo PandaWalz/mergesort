@@ -1,0 +1,39 @@
+# //  ModelSim SE 10.0c Jul 21 2011 Linux 2.6.32-504.12.2.el6.x86_64
+# //
+# //  Copyright 1991-2011 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+#  
+vlog -reportprogress 300 -work work /afs/unity.ncsu.edu/users/l/ltwalz/Homework/ECE464/Project/twobytesort.v
+# Model Technology ModelSim SE vlog 10.0c Compiler 2011.07 Jul 21 2011
+# -- Compiling module twobytesort
+# 
+# Top level modules:
+# 	twobytesort
+vlog -reportprogress 300 -work work /afs/unity.ncsu.edu/users/l/ltwalz/Homework/ECE464/Project/mergesort.v
+# Model Technology ModelSim SE vlog 10.0c Compiler 2011.07 Jul 21 2011
+# -- Compiling module mergesort
+# 
+# Top level modules:
+# 	mergesort
+vlog -reportprogress 300 -work work /afs/unity.ncsu.edu/users/l/ltwalz/Homework/ECE464/Project/mergesort_test.v
+# Model Technology ModelSim SE vlog 10.0c Compiler 2011.07 Jul 21 2011
+# -- Compiling module mergesort_test
+# 
+# Top level modules:
+# 	mergesort_test
+vlog -reportprogress 300 -work work /afs/unity.ncsu.edu/users/l/ltwalz/Homework/ECE464/Project/twobytesort.v
+# Model Technology ModelSim SE vlog 10.0c Compiler 2011.07 Jul 21 2011
+# -- Compiling module twobytesort
+# 
+# Top level modules:
+# 	twobytesort
+vsim work.mergesort
+# vsim work.mergesort 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.mergesort(fast)
+run

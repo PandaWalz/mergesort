@@ -4,3 +4,6 @@
 //
 +access+r
 mergesort.v
+mergesort_test.v
+twobytesort.v
+twobytesort_test.v

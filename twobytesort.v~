@@ -1,0 +1,30 @@
+module twobytesort(clock, reset, word1,word2,left,right);
+
+//------inputs-----------//
+input [7:0] word1,word2;
+input clock,reset;
+reg [7:0] leftanswer,rightanswer;
+
+//------outputs---------//
+output [7:0] left,right;
+
+always@(posedge clock)
+begin
+if(word1 <= word2)
+begin
+	leftanswer <= word1;
+	rightanswer <= word2;
+end
+else
+begin
+	leftanswer <= word2;
+	rightanswer <= word2;
+end
+end //End of always@
+
+assign left = leftanswer;
+assign right = rightanswer;
+
+endmodule
+
+

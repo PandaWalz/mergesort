@@ -34,8 +34,6 @@ initial begin		 //Load data values into memory
 //------setup registers for sorting//
 always@(posedge clock)
 begin	//Compare the first two blocks
-	mem2_reg0 <= mem2_reg0_wire;
-	mem2_reg1 <= mem2_reg1_wire;
 end
 
 twobytesort twobytesort1(
